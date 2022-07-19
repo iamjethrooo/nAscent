@@ -9,3 +9,18 @@ $(document).ready(function () {
     );
   });
 });
+
+const images = document.querySelectorAll(".service-image img");
+const modalwrap = document.querySelector(".modal-wrap");
+const modalcontent = document.querySelector(".modal-content");
+
+images.forEach(image => {
+  image.addEventListener('click', function() {
+    modalcontent.style.backgroundImage = `url(${image.src})`;
+    modalwrap.style.display = 'flex';
+  });
+});
+
+modalwrap.addEventListener('click', function() {
+  modalwrap.style.display = 'none';
+});
