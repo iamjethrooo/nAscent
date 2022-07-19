@@ -32,7 +32,7 @@ body {
 
 section {
   width: 75%;
-  padding: 0 0 5rem 0;
+  padding-bottom: 5rem;
 }
 
 .section-heading {
@@ -61,6 +61,9 @@ section {
 
 /* Home */
 .home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 100%;
   height: 100vh;
 }
@@ -69,16 +72,24 @@ section {
   position: absolute;
   width: 100%;
   height: 100vh;
-  background-image: url(../images/header.png);
+  background-image: url(../images/bg.png);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
+.home-logo {
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+}
+.home-logo img {
+  width: 45%;
+}
+
 /* Services */
 .services {
-  padding-top: 5rem;
   width: 100%;
 }
 
@@ -95,18 +106,21 @@ section {
 
 .service-image {
   flex: 1;
-  max-width: 25%;
+  max-width: 35%;
 }
 .service-image img {
   object-fit: cover;
   max-width: 100%;
+}
+.service-image img:hover {
+  cursor: pointer;
 }
 
 .service-description {
   flex: 1;
   width: 55%;
   max-width: 55%;
-  font-size: 2.5rem;
+  font-size: 2rem;
   line-height: 2.5rem;
   text-align: center;
 }
