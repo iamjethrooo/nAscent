@@ -16,6 +16,11 @@ html {
     overflow: hidden;
 }
 
+html, body {
+    height: auto;
+    min-height: 100%;
+}
+
 /* Body */
 .wrapper {
     height: 100vh;
@@ -27,8 +32,7 @@ html {
 }
 
 .container {
-    width: 65%;
-    max-width: 100%;
+    width: 90%;
     height: 100%;
     margin: 0 auto;
     position: relative;
@@ -41,9 +45,9 @@ section {
 
 .section-heading {
     text-align: center;
-    margin-bottom: 1rem;
+    margin-bottom: 7.5rem;
     h1 {
-        font-size: 3.5rem;
+        font-size: 2.5rem;
         font-weight: 300;
         margin-bottom: 1rem;
         position: relative;
@@ -95,7 +99,7 @@ section {
     display: flex;
     justify-content: center;
     position: absolute;
-    width: 45%;
+    width: 65%;
     object-fit: cover;
     transform: translateZ(-5px) scale(1.5);
 }
@@ -109,19 +113,20 @@ section {
 }
 
 .service {
+    padding: 3rem 0;
     display: flex;
-    padding: 5rem 0;
     align-items: center;
     flex-direction: column;
     justify-content: center;
     width: 100%;
     justify-content: space-around;
-    flex-direction: row;
 }
 
 .service-image {
     flex: 1;
-    max-width: 35%;
+    max-width: 80%;
+    order: -1;
+    padding-bottom: 1rem;
     img {
         object-fit: cover;
         max-width: 100%;
@@ -133,9 +138,8 @@ section {
 
 .service-description {
     flex: 1;
-    width: 55%;
-    max-width: 55%;
-    font-size: 2rem;
+    width: 70%;
+    font-size: 1.5rem;
     line-height: 2.5rem;
     text-align: center;
 }
@@ -200,6 +204,9 @@ section {
     font-size: 2rem;
     margin: auto;
 }
+#width {
+    font-size: 2rem;
+}
 
 @keyframes pulse {
     0% {
@@ -215,19 +222,72 @@ section {
 
 
 /* Media Queries */
-@media only screen and (max-width: 1366px) {
+
+/* Small devices (tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
     .home-logo {
-        width: 65%;
+        width: 60%;
     }
-    .service {
-        flex-direction: column;
-    }
+    
     .service-image {
-        max-width: 75%;
-        order: -1;
-        padding-bottom: 1rem;
+        max-width: 70%;
+        padding-bottom: unset;
     }
+
     .service-description {
         font-size: 1.75rem;
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .section-heading {
+        h1 {
+            font-size: 3.5rem;
+        }
+    } 
+
+    .container {
+        width: 85%;
+    }
+
+    .service {
+        padding: 5rem 0;
+        flex-direction: unset;
+    }
+    
+    .service-image {
+        max-width: 50%;
+        order: unset;
+        padding-bottom: unset;
+    }
+
+    .service-description {
+        max-width: 35%;
+    }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .container {
+        width: 65%;
+    }
+
+    .home-logo {
+        width: 45%;
+    }
+    
+    .service-image {
+        max-width: 45%;
+        padding-bottom: unset;
+    }
+
+    .service-description {
+        font-size: 2rem;
+        max-width: 50%;
     }
 }
