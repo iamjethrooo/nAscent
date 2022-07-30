@@ -1,7 +1,7 @@
 // Up button
 $(document).ready(function () {
   $("#up").on("click", function () {
-    $("html, body").animate(
+    $(".wrapper").animate(
       {
         scrollTop: 0,
       },
