@@ -197,14 +197,17 @@ section {
   animation: pulse 2s infinite;
 }
 
-.up i {
-  color: white;
-  font-size: 2rem;
+.up img {
+  width: 2rem;
   margin: auto;
 }
 
 #width {
   font-size: 2rem;
+}
+
+.filter-white {
+  filter: invert(98%) sepia(5%) saturate(47%) hue-rotate(210deg) brightness(113%) contrast(100%);
 }
 
 @keyframes pulse {
